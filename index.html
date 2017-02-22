@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- AUTHOR: Junhui Xie
+    CREATED: 2015-02-04
+    UPDATED: 2015-02-10 -->
+
+<html>
+    <head>
+        <title>Assignment 1_Junhui Xie</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Junhui Xie">
+        <meta name="description" content="Assignment 1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+    </head>
+    <body>
+        <div>   
+            <h2 id='header'><span id='songTitle'>What's Up</span> by <span id='artistName'>Mariah Carey</span></h2>
+            <article>
+                <!--http://www.songtexte.com/songtext/4-non-blondes/whats-up-53c03701.html-->
+                <p>25 years of my life and still<br><span id='firstLyrics'>I'm trying to get up that great big hill of hope</span><br>
+                   For a destination<br>I realized quickly when I knew I should<br>
+                   <span id='secondLyrics'>That the world was made of this brotherhood of man</span><br>For whatever that means</p>
+                <p>And so I cry sometimes<br>When I'm lying in bed<br>Just to get it all out<br>
+                   What's in my head<br><span id='thirdLyrics'>And I, I am feeling a little peculiar.</span></p>
+                <p>And so I wake in the morning<br>And I step outside<br>
+                   And I take a deep breath and I get real high<br>And I scream from the top of my lungs<br>
+                   <span id='fourthLyrics'>What's going on?</span></p>
+                <p>And I say:<br>Hey yeah yeaaah!<br>Hey yeah yeah.<br>I said hey,<br>What's going on?</p>
+                <p>And I say:<br>Hey yeah yeaaah!<br>Hey yeah yeah.<br>I said hey,<br>What's going on?</p>
+                <p>Uhh, uh, uhuhuh uhuhuh<br>Uhh, uh, uhuhuh uhuhuh</p>
+                <p>And I try<br>Oh my god do I try<br><span id='fifthLyrics'>I try all the time</span><br>In this institution</p>
+                <p id='sixthLyrics'>And I pray<br>Oh my god do I pray<br>I pray every single day<br>For a revolution.</p>
+                <p>And so I cry sometimes<br>When I'm lying bed<br>Just to get it all out<br>
+                   What's in my head<br>And I, I am feeling a little peculiar</p>
+                <p>And so I wake in the morning<br>And I step outside<br>
+                   And I take a deep breath and I get real high<br>And I scream from the top of my lungs<br>
+                   <span id='seventhLyrics'>What's going on?</span></p>
+                <p>And I say:<br>Hey yeah yeaaah!<br>Hey yeah yeah.<br>I said hey,<br>What's going on?</p>
+                <p id="stack">Stack Word</p>
+                <p>And I say:<br>Hey yeah yeaaah!<br>Hey yeah yeah.<br>I said hey,<br>What's going on?</p>
+                <p>Uhh, uh, uhuhuh uhuhuh</p>
+                <p>25 years of my life and still<br>I'm trying to get up that great big hill of hope<br>
+                   <span id='eighthLyrics'>For a destination</span></p>
+            </article>
+            <footer>
+                This page is created by Junhui Xie<br>This lyrics is provided by the courtesy of:<br> 
+                http://www.songtexte.com/songtext/4-non-blondes/whats-up-53c03701.html
+            </footer>
+        </div>
+        <script type ="text/javascript">
+            for (var i = 0; i >= 0; ++i)
+            {
+                var display = confirm("Do you want to change the song lyrics?");
+            
+                if (display) {
+                    var ID = prompt("Please enter the element's id:");  
+                    var modify = confirm("Do you want to modify the text?");
+                    
+                    if (modify) {
+                        var change = prompt("What the new text do you want to change?");
+                        var text = document.getElementById(ID).innerHTML = change;
+                    } else {
+                        var lyrics = alert("Please enter the CSS property and new value:");
+                        lyrics = document.getElementById(ID);
+                        lyrics["style"]["fontStyle"] = "italic";
+                        lyrics["style"]["textShadow"] = "0 0 10px #FF5000";
+                        lyrics["style"]["color"] = "#FFFF66";
+                        lyrics["style"]["fontSize"] = "19px";
+                    } 
+                     
+                } else {
+                    alert("Thank you for using this application!");
+                }
+            }
+        </script>
+    </body>
+</html>
